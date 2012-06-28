@@ -109,20 +109,26 @@ Hello World
 
 -   IDLE
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>>print 'Hello World'
-~~~~
+
+{% endhighlight %}
 
 -   脚本
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 #hello_world.py
 print 'Hello World'
-~~~~
 
-~~~~ {.code .bash .literal-block}
+{% endhighlight %}
+
+{% highlight bash %}
+
 $python hello_world.py
-~~~~
+
+{% endhighlight %}
 
 基础类型
 ========
@@ -148,82 +154,98 @@ $python hello_world.py
 控制流: if
 ==========
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 if guss == True:
     print 'guss is true'
 elif guss is None:
     print 'guss is None'
 else:
     print 'gus is else'
-~~~~
+
+{% endhighlight %}
 
 控制流：while & for
 ==================
 
 -   while
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 while True:
     print 'True now'
-~~~~
+
+{% endhighlight %}
 
 -   for
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 for i in range(0,5):
     print 'i is %d' % i
 else:
     print 'i is out of range'
-~~~~
+
+{% endhighlight %}
 
 控制流: break & continue
 ========================
 
 -   break
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 while True:
     s = raw_input('please input a char: ')
     if s == 'q':
         break;
-~~~~
+
+{% endhighlight %}
 
 -   continue
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 while True:
     s = raw_input('please input a char: ')
     if s == 'q'
         break;
     else:
         continue
-~~~~
+
+{% endhighlight %}
 
 函数
 ====
 
 -   定义函数
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 def fun(a):
     print 'a is %d' % a
-~~~~
+
+{% endhighlight %}
 
 -   使用函数
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>>fun(5)
 >>>a is 5
-~~~~
+
+{% endhighlight %}
 
 -   global: 函数内部引用外部定义的变量，需要在声明变量为全局的
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 x = 4
 def fun(a):
     global x
     return 'a add x is %d' % (a + x)
-~~~~
+
+{% endhighlight %}
 
 DocString
 
@@ -239,14 +261,17 @@ DocString
 
 -   引用模块:
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 import sys
 from sys import argv
-~~~~
+
+{% endhighlight %}
 
 -   定义模块：
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 #Filename: mymodule.py
 def Hi():
     print 'Hi"
@@ -258,7 +283,8 @@ version = 0.1
 import mymodule
 mymodule.Hi()
 print mymodule.version
-~~~~
+
+{% endhighlight %}
 
 数据结构: list
 ==============
@@ -281,7 +307,8 @@ list: code
 
 -   代码
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>> a = [66.25, 333, 333, 1, 1234.5]
 >>> print a.count(333), a.count(66.25), a.count('x')
 2 1 0
@@ -300,7 +327,8 @@ list: code
 >>> a.sort()
 >>> a
 [-1, 1, 66.25, 333, 333, 1234.5]
-~~~~
+
+{% endhighlight %}
 
 数据结构：tuple
 ==============
@@ -308,7 +336,8 @@ list: code
 -   元组和列表十分类似，只不过元组和字符串一样是 不可变的
     即你不能修改元组
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>> t = 12345, 54321, 'hello!'
 >>> t[0]
 12345
@@ -327,13 +356,15 @@ Traceback (most recent call last):
   ... v = ([1, 2, 3], [3, 2, 1])
   >>> v
   ([1, 2, 3], [3, 2, 1])
-~~~~
+
+{% endhighlight %}
 
 数据结构：sets
 =============
 
 -   集合是一组无序且没有重复的元素所组成的
-      ~ ~~~~ {.code .python .first .last .literal-block}
+{% highlight python %}
+
 >>> basket = ['apple', \
 'orange', 'apple', 'pear', 'orange', 'banana']
 >>> fruit = set(basket)    # create a set without duplicates
@@ -353,14 +384,16 @@ set(['a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'])
 set(['a', 'c'])
 >>> a ^ b                 # letters in a or b but not both
 set(['r', 'd', 'b', 'm', 'z', 'l'])
-~~~~
+
+{% endhighlight %}
 
 数据结构：dict
 =============
 
 -   字典可以认为是一种key:value的数组，其中key是唯一的
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>> tel = {'jack': 4098, 'sape': 4139}
 >>> tel['guido'] = 4127
 >>> tel
@@ -375,7 +408,8 @@ set(['r', 'd', 'b', 'm', 'z', 'l'])
 ['guido', 'irv', 'jack']
 >>> 'guido' in tel
 True
-~~~~
+
+{% endhighlight %}
 
 Python中的引用及参数传递
 ========================
@@ -402,7 +436,8 @@ dict相当于传递引用
 
 -   代码
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 class FileInfo(UserDict):
     "store file metadata"
     def __init__(self, filename=None):
@@ -410,7 +445,8 @@ class FileInfo(UserDict):
         self["name"] = filename
     def PrintName(self):
         print self["name"]
-~~~~
+
+{% endhighlight %}
 
 类：多继承
 =========
@@ -420,7 +456,8 @@ class FileInfo(UserDict):
 -   新式类中，使用广度优先，首先查找兄弟，从左至右遍历查询方法
 -   一般最好少采用多继承
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 class P1: #(object): # parent class 1
     def foo(self):
         print 'called P1-foo()'
@@ -440,64 +477,77 @@ class C2(P1, P2): # child 2 derived from P1, P2
 
 class GC(C1, C2): # define grandchild class
     pass # derived from C1 and C2
-~~~~
+
+{% endhighlight %}
 
 首先采用经典类，调用foo()时首先查找GC，没有则向上查找左面第一个父亲C1，也没找到继续向上查找P1，找到后调用输出。对于bar()来说在P2找到后根本不会调用C2.bar()
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>> gc = GC()
 >>> gc.foo() # GC ==> C1 ==> P1
 called P1-foo()
 >>> gc.bar() # GC ==> C1 ==> P1 ==> P2
 called P2-bar()
-~~~~
+
+{% endhighlight %}
 
 然后将\#(object)的注释去掉，查看新式类的调用顺序，调用foo()，首先查找GC，然后查找C1，C2在P1中找到，查找bar()，首先查找GC，C1，然后在C2中找到，那么不再查找P2.bar()
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>> gc = GC()
 >>> gc.foo() # GC ==> C1 ==> C2 ==> P1
 called P1-foo()
 >>> gc.bar() # GC ==> C1 ==> C2
 called C2-bar()
-~~~~
+
+{% endhighlight %}
 
 新式类有个属性\_\_mro\_\_可以告诉你调用顺序
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 >>> GC.__mro__
 (<class '__main__.GC'>, <class '__main__.C1'>, <class
 '__main__.C2'>, <class '__main__.P1'>, <class
 '__main__.P2'>, <type 'object'>)
-~~~~
+
+{% endhighlight %}
 
 文件操作
 ========
 
 -   打开关闭
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 file_object = open('thefile.txt')
 file_object.close()
-~~~~
+
+{% endhighlight %}
 
 -   读文件
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 rfile = open('data', 'r')
 all_data = rfile.read()
 chunk_data = rfile.read(100)
 lines_data = rfile.readlines()
 rfile.close()
-~~~~
+
+{% endhighlight %}
 
 -   写文件
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 wfile = open('data','w')
 wfile.write(all_data)
 wfile.writelines(lines_data)
-~~~~
+
+{% endhighlight %}
 
 异常处理
 ========
@@ -515,7 +565,8 @@ wfile.writelines(lines_data)
 ================
 
 -   try...except
-      ~ ~~~~ {.code .python .first .last .literal-block}
+{% highlight python %}
+
 try:
     s = raw_input('Enter something --> ')
 except EOFError:#处理EOFError类型的异常
@@ -523,23 +574,27 @@ except EOFError:#处理EOFError类型的异常
     sys.exit() # 退出程序
 except:#处理其它的异常
     print '/nSome error/exception occurred.'
-~~~~
+
+{% endhighlight %}
 
 -   raise exception
-      ~ ~~~~ {.code .python .first .last .literal-block}
+{% highlight python %}
+
 class ShortInputException(Exception):
 '''你定义的异常类。'''
     def __init__(self, length, atleast):
         Exception.__init__(self)
         self.length = length
         self.atleast = atleast
-~~~~
+
+{% endhighlight %}
 
 异常处理:code(2)
 ================
 
 -   raise exception
-      ~ ~~~~ {.code .python .first .last .literal-block}
+{% highlight python %}
+
 try:
     s = raw_input('请输入 --> ')
     if len(s) < 3:
@@ -551,13 +606,15 @@ except ShortInputException, x:#x这个变量被绑定到了错误的实例
     print 'ShortInputException: 输入的长度是 %d
 else:
     print '没有异常发生.'
-~~~~
+
+{% endhighlight %}
 
 异常处理:code(3)
 ================
 
 -   try... finally
-      ~ ~~~~ {.code .python .first .last .literal-block}
+{% highlight python %}
+
 try:
     f = file('poem.txt')
     lines = f.readlines()
@@ -566,7 +623,8 @@ try:
 finally:
     f.close()
     print 'Cleaning up...closed the file'
-~~~~
+
+{% endhighlight %}
 
 标准库简介
 ==========
@@ -575,7 +633,8 @@ finally:
     Library)包含了大量非常有用的模块(module)，并是Python的标准安装版的一部分
 
 -   包含sys, time, shutil, os...大量覆盖不同需求的模块
-      ~ ~~~~ {.code .python .first .last .literal-block}
+{% highlight python %}
+
 import sys
 def readfile(filename):
 f = file(filename)
@@ -593,7 +652,8 @@ if sys.argv[1].startswith('--'):
     if option == 'version':
         print 'Version 1.2'
     elif option == 'help':
-~~~~
+
+{% endhighlight %}
 
 PS1.2中Python的使用
 ===================
@@ -637,7 +697,8 @@ os:code
 
 -   代码：
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 #filename: process_operation.py
 
     cur_dir = os.getcwd()
@@ -651,14 +712,16 @@ os:code
                 cmd_str = './run.sh'
             else:
                 cmd_str = './' + open_name
-~~~~
+
+{% endhighlight %}
 
 ConfigParser模块
 ================
 
 -   ConfigParser模块主要用于解析ini格式的配置文件
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 #filename: config_parse.python
 
 cf = ConfigParser.ConfigParser()
@@ -671,14 +734,16 @@ self._server_ip = cf.get("LocalMachine","serverip")
 self._moniter_time_interval = cf.getint("LocalMachine", \
                             "monitertimeinterval")
 self._screen_width = cf.getint("LocalMachine", "screenwidth")
-~~~~
+
+{% endhighlight %}
 
 logging模块
 ===========
 
 -   logging模块提供日志功能
 
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 #file_name: config_parse.python
 ps_home = os.environ["PS_HOME"]
 log_path = ps_home + '/' + self._log_dir
@@ -696,7 +761,8 @@ console.setLevel(logging.INFO)
 formatter = logging.Formatter('%(name)-12s: \
                 %(levelname)-8s %(message)s')
 console.setFormatter(formatter)
-~~~~
+
+{% endhighlight %}
 
 subprocess模块
 ==============
@@ -717,7 +783,8 @@ subprocess:code
 ===============
 
 -   代码：
-      ~ ~~~~ {.code .python .first .last .literal-block}
+      {% highlight python %}
+
 #file_name: process_operation.py
 
 #windows platform
@@ -726,13 +793,15 @@ if system_identify.g_sys_type is 0:
              subprocess.CREATE_NEW_CONSOLE)
 else:
     p = subprocess.Popen(cmd_str)
-~~~~
+
+{% endhighlight %}
 
 xml.dom模块
 ===========
 
 -   作为一个简单处理xml格式的模块，代码如下
-      ~ ~~~~ {.code .python .first .last .literal-block}
+      {% highlight python %}
+
 #file_name: ps12_daemon.py
 
 impl = minidom.getDOMImplementation()
@@ -746,13 +815,15 @@ result_file = open(sender_xml_file, 'wb+')
 writer = codecs.lookup('utf-8')[3](result_file)
 newdoc.writexml(writer, encoding='utf-8')
 writer.close()
-~~~~
+
+{% endhighlight %}
 
 re模块
 ======
 
 -   re使得Python具有了正则表达式的功能
-      ~ ~~~~ {.code .python .first .last .literal-block}
+      {% highlight python %}
+
 #filename: pss_install.py
 def ShmParse(file,phymem):
     f = open(file,'r+')
@@ -782,13 +853,15 @@ def ShmParse(file,phymem):
     f.truncate()
     f.writelines(w_lines)
     f.close()
-~~~~
+
+{% endhighlight %}
 
 psutil库
 ========
 
 -   psutil作为一个提供当前系统运行状态的模块，比如cpu,内存等
-      ~ ~~~~ {.code .python .first .last .literal-block}
+      {% highlight python %}
+
 #filename: process_operation.py
     def close_process_by_name(self,name):
         if self._name_ids.has_key(name):
@@ -802,7 +875,8 @@ psutil库
                 pass
         else:
             logging.info('not found process by name %s ' % name)
-~~~~
+
+{% endhighlight %}
 
 Twisted库
 =========
@@ -830,7 +904,8 @@ Twisted:code
 ============
 
 -   代码：
-      ~ ~~~~ {.code .python .first .last .literal-block}
+      {% highlight python %}
+
 #filename: server.py
 class DaemonProtocol(Protocol):
     def __init__(self,factory):
@@ -849,7 +924,8 @@ if __name__ == "__main__":
     reactor.listenTCP(int(port), DaemonFactory())
     reactor.run()
     #...
-~~~~
+
+{% endhighlight %}
 
 Python的不足以及发展
 ====================
@@ -899,12 +975,14 @@ Python的发展
 >         -   协程(Coroutines)使得开发者可以采用阻塞式的开发风格,却能够实现非阻塞I/O的效果
 >         -   隐式事件调度,使得可以在Python解释器或者应用程序的某一部分去使用Eventlet
 >
-~~~~ {.code .python .literal-block}
+{% highlight python %}
+
 import eventlet
 pool = eventlet.GreenPool()
 while True:
    pool.spawn(func,args )
-~~~~
+
+{% endhighlight %}
 >
 >         其中
 >           ~ -   GreenPool 用来实现协程,保证并行
