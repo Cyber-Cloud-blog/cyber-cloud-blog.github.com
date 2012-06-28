@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: Cyber Cloud Blog
 tagline: 
 ---
 {% include JB/setup %}
